@@ -2,7 +2,7 @@ FROM alpine:3.9
 
 LABEL maintainer="Tadas Kepalas <tadas@kepalas.lt>"
 
-RUN apk add --no-cache --update-cache python py-pip bash \
+RUN apk add --no-cache --update-cache python py-pip bash coreutils jq \
     && pip install awscli \
     && apk del --purge py-pip
 
